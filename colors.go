@@ -53,14 +53,16 @@ func StrLen(str string) int {
 	return len(str)
 }
 
-func Left(str *string, width *int) {
+func Left(str string, width int) string {
 	padCount := 0
 
-	if *width > StrLen(*str) {
-		padCount = (*width) - StrLen(*str)
+	if width > StrLen(str) {
+		padCount = width - StrLen(str)
 	}
 
-	*str = *str + strings.Repeat(" ", padCount)
+	str = str + strings.Repeat(" ", padCount)
+
+	return str
 }
 
 func LocateAll(str string) []Location {

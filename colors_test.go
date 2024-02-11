@@ -36,9 +36,9 @@ func TestStrLen(t *testing.T) {
 
 func TestLeft(t *testing.T) {
 	width := 38
+	unpadded := Green("color me green. ") + Red("color me red")
 	expected := Green("color me green. ") + Red("color me red") + "          "
-	actual := Green("color me green. ") + Red("color me red")
-	Left(&actual, &width)
+	actual := Left(unpadded, width)
 
 	if expected != actual {
 		t.Fatalf("\nExpected:\t'%s'\nActual:\t\t'%s'\n", expected, actual)
