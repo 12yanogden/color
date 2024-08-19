@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/12yanogden/slices"
+	slices "github.com/12yanogden/go-slices"
 	"golang.org/x/term"
 )
 
